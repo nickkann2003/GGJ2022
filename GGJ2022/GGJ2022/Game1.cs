@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGame.Extended.ViewportAdapters;
 
 namespace GGJ2022
 {
@@ -8,6 +9,7 @@ namespace GGJ2022
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        private CameraHandler cam;
 
         public Game1()
         {
@@ -21,6 +23,7 @@ namespace GGJ2022
             // TODO: Add your initialization logic here
 
             base.Initialize();
+            cam = new CameraHandler(Window, GraphicsDevice);
         }
 
         protected override void LoadContent()
@@ -36,6 +39,7 @@ namespace GGJ2022
                 Exit();
 
             // TODO: Add your update logic here
+           
 
             base.Update(gameTime);
         }
@@ -44,7 +48,10 @@ namespace GGJ2022
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            // Drawing using cam's matrix
+            _spriteBatch.Begin(transformMatrix: cam.GetCameraViewMatrix());
+
+            _spriteBatch.End();
 
             base.Draw(gameTime);
         }
