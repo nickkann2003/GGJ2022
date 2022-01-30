@@ -57,8 +57,9 @@ namespace GGJ2022
                 {
                     if (transitionState != null)
                     {
-                        states.Pop();
+                        states.Pop().Dispose();
                         states.Push(transitionState);
+                        transitionState = null;
                     }
                 }
                 int alpha = 255 - (int)(Math.Abs((transitionTimer-transitionMax/2)/(transitionMax/2)) * 255);

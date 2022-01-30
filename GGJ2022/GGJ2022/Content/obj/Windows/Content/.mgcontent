@@ -9,6 +9,7 @@
     <File>C:/Users/rkann/source/repos/GGJ2022/GGJ2022/GGJ2022/Content/floatsom1.png</File>
     <File>C:/Users/rkann/source/repos/GGJ2022/GGJ2022/GGJ2022/Content/floatsomBackground.png</File>
     <File>C:/Users/rkann/source/repos/GGJ2022/GGJ2022/GGJ2022/Content/floatsomBackgroundOverlay.png</File>
+    <File>C:/Users/rkann/source/repos/GGJ2022/GGJ2022/GGJ2022/Content/playerCharacter.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
@@ -16,5 +17,6 @@
     <File xsi:nil="true" />
     <File>background.png</File>
     <File>backgroundOverlay.png</File>
+    <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

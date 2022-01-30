@@ -15,7 +15,7 @@ namespace GGJ2022
 
         public IntroState(World world, SpriteBatch batch, Game1 game) : base(world, batch, game)
         {
-            String[] words = "The opposite of a dream is not a nightmare , but reality itself".Split(" ");
+            String[] words = "A second spent dreaming is a second well spent , but it cant be refunded".Split(" ");
             text = new List<Word>();
             timePassed = 0;
             float distance = 100;
@@ -34,7 +34,7 @@ namespace GGJ2022
                 distance += 30 * (words[i].Length + 1);
                 if(i == 9)
                 {
-                    distance = 1200;
+                    distance = 1050;
                 }
             }
         }
@@ -49,7 +49,7 @@ namespace GGJ2022
             if(timePassed > 9)
             {
                 timePassed = 0;
-                GameStateManager.Transition(5, new AsleepState(world, batch, game));
+                GameStateManager.Transition(5, new AwakeState(world, batch, game));
             }
         }
 

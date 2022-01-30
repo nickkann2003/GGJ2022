@@ -17,7 +17,7 @@ namespace GGJ2022
         //Image Variables (Testing)
 
         //Physics "stuff"
-        public World world = new World(new tainicom.Aether.Physics2D.Common.Vector2(0, 45));
+        public World world = new World(new tainicom.Aether.Physics2D.Common.Vector2(0, 200));
 
         //Fields
         public SpriteFont font;
@@ -39,8 +39,7 @@ namespace GGJ2022
             // TODO: Add your initialization logic here
 
             base.Initialize();
-            cam = new CameraHandler(Window, GraphicsDevice);
-            
+            cam = new CameraHandler(Window, GraphicsDevice);            
         }
 
         //Load graphics

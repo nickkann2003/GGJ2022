@@ -49,3 +49,5 @@ C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Aeth
 C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\BitScript.xnb
 C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\BitScript_r2.xnb
 C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\blackSquare.xnb
+C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\MonoGame.Primitives2D.dll
+C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\playerCharacter.xnb
