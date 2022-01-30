@@ -31,6 +31,7 @@ namespace GGJ2022
             _graphics.PreferredBackBufferWidth = 960;
             _graphics.PreferredBackBufferHeight = 540;
             _graphics.ApplyChanges();
+            Window.Title = "Floatsom";
         }
 
         //Initialize all variables
