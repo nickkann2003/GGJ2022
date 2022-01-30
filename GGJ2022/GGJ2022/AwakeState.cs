@@ -32,7 +32,7 @@ namespace GGJ2022
         {
             p.Update(deltaTime);
             t.Update(deltaTime*2);
-            if(t.TimePassed >= 5 && t.TimePassed < 31)
+            if(t.TimePassed >= 30.5f && t.TimePassed < 31)
             {
                 t.TimePassed = 31;
                 GameStateManager.Transition(5, new AsleepState(world, batch, game, 33.4f));

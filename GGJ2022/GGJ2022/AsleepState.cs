@@ -11,7 +11,7 @@ namespace GGJ2022
     {
         //Fields
         Timer t;
-        Texture2D background;
+        Background background;
         Body floor;
         Player p;
 
@@ -19,7 +19,7 @@ namespace GGJ2022
         public AsleepState(World world, SpriteBatch batch, Game1 game, float time) : base(world, batch, game)
         {
             t = new Timer(time, true, batch, game.font);
-            background = game.Content.Load<Texture2D>("floatsomBackground");
+            background = new Background(batch, game);
             floor = world.CreateEdge(new tainicom.Aether.Physics2D.Common.Vector2(0,900), new tainicom.Aether.Physics2D.Common.Vector2(1920,900));
             p = new Player(world, batch, game.Content.Load<Texture2D>("playerCharacter"), game, true);
         }
@@ -28,6 +28,7 @@ namespace GGJ2022
 
         public override void Update(float deltaTime)
         {
+            background.Update(deltaTime, 100);
             t.Update(deltaTime);
             p.Update(deltaTime);
             if(t.TimePassed < 0)
@@ -40,7 +41,7 @@ namespace GGJ2022
 
         public override void Draw()
         {
-            batch.Draw(background, new Vector2(0, 0), Color.White);
+            background.Draw();
             t.Draw();
             batch.Draw(p.GetTexture(), new Rectangle((int)p.GetX(), 892, p.Size, (int)((20f / 50f) * p.Size)), Color.DarkGray);
             p.Draw();
