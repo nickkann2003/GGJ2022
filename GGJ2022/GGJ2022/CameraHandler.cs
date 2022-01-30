@@ -25,7 +25,7 @@ namespace GGJ2022
         public CameraHandler(GameWindow Window, GraphicsDevice GraphicsDevice)
         {
             //Makes cam
-            var viewportAdapter = new BoxingViewportAdapter(Window, GraphicsDevice, 800, 480);
+            var viewportAdapter = new BoxingViewportAdapter(Window, GraphicsDevice, 1920, 1080);
             camera = new OrthographicCamera(viewportAdapter);
         }
 

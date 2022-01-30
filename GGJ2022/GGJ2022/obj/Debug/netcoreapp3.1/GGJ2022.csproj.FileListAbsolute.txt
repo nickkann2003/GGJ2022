@@ -40,3 +40,12 @@ C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Mono
 C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\MonoGame.Extended.Graphics.dll
 C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\MonoGame.Extended.Tiled.dll
 C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\floatsom1.xnb
+C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\floatsomBackground.xnb
+C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\floatsomBackgroundOverlay.xnb
+C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\background.xnb
+C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\backgroundOverlay.xnb
+C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Aether.Physics2D.dll
+C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\BitScript.xnb
+C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\BitScript_r2.xnb
+C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\blackSquare.xnb

@@ -1,1 +1,6 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/rkann/source/repos/GGJ2022/GGJ2022/GGJ2022/Content/BitScript.spritefont","C:/Users/rkann/source/repos/GGJ2022/GGJ2022/GGJ2022/Content/bin/Windows/Content/BitScript.xnb","FontDescriptionProcessor","SpriteFontContent",2012,37922,0.1521591
+"C:/Users/rkann/source/repos/GGJ2022/GGJ2022/GGJ2022/Content/blackSquare.png","C:/Users/rkann/source/repos/GGJ2022/GGJ2022/GGJ2022/Content/bin/Windows/Content/blackSquare.xnb","TextureProcessor","Texture2DContent",6129,8294485,0.2674301
+"C:/Users/rkann/source/repos/GGJ2022/GGJ2022/GGJ2022/Content/floatsom1.png","C:/Users/rkann/source/repos/GGJ2022/GGJ2022/GGJ2022/Content/bin/Windows/Content/floatsom1.xnb","TextureProcessor","Texture2DContent",2568,640085,0.1216253
+"C:/Users/rkann/source/repos/GGJ2022/GGJ2022/GGJ2022/Content/floatsomBackground.png","C:/Users/rkann/source/repos/GGJ2022/GGJ2022/GGJ2022/Content/bin/Windows/Content/background.xnb","TextureProcessor","Texture2DContent",32110,8294485,0.2804503
+"C:/Users/rkann/source/repos/GGJ2022/GGJ2022/GGJ2022/Content/floatsomBackgroundOverlay.png","C:/Users/rkann/source/repos/GGJ2022/GGJ2022/GGJ2022/Content/bin/Windows/Content/backgroundOverlay.xnb","TextureProcessor","Texture2DContent",13119,8294485,0.1711568

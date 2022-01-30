@@ -1,0 +1,4 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/rkann/source/repos/GGJ2022/GGJ2022/GGJ2022/Content/floatsom1.png","C:/Users/rkann/source/repos/GGJ2022/GGJ2022/GGJ2022/Content/bin/Windows/floatsom1.xnb","TextureProcessor","Texture2DContent",2568,640085,0.0185159
+"C:/Users/rkann/source/repos/GGJ2022/GGJ2022/GGJ2022/Content/floatsomBackground.png","C:/Users/rkann/source/repos/GGJ2022/GGJ2022/GGJ2022/Content/bin/Windows/background.xnb","TextureProcessor","Texture2DContent",32110,8294485,0.171216
+"C:/Users/rkann/source/repos/GGJ2022/GGJ2022/GGJ2022/Content/floatsomBackgroundOverlay.png","C:/Users/rkann/source/repos/GGJ2022/GGJ2022/GGJ2022/Content/bin/Windows/backgroundOverlay.xnb","TextureProcessor","Texture2DContent",13119,8294485,0.1522846
