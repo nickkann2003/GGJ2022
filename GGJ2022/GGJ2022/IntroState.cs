@@ -46,9 +46,9 @@ namespace GGJ2022
                 w.Update(deltaTime);
             }
             timePassed += deltaTime;
-            if(timePassed > 9)
+            if(timePassed > 1)
             {
-                timePassed = 0;
+                timePassed = -10;
                 GameStateManager.Transition(5, new AwakeState(world, batch, game));
             }
         }

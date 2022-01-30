@@ -27,13 +27,18 @@ namespace GGJ2022
             createTimer = 1f;
             bg = game.Content.Load<Texture2D>("floatsomBackground");
             bgOverlay = game.Content.Load<Texture2D>("floatsomBackgroundOverlay");
+            for(int i = 0; i < 5; i++)
+            {
+                CreateFlotsam();
+            }
         }
 
         public void CreateFlotsam()
         {
             float width = rng.Next(150, 350);
             float height = width + rng.Next(-50, 50);
-            flotsam.Add(new Flotsam(rng.Next(1000, 1800), rng.Next(0, 800), rng.Next(15, 85) / 100f, width, height, rng.Next(10), batch, game)); 
+            float mult = (rng.Next(90, 190) / 100f) * (rng.Next(70, 150) / 100f);
+            flotsam.Add(new Flotsam(rng.Next(2400, 2900), rng.Next(-150, 800), mult, width, height, rng.Next(10), batch, game)); 
         }
 
         public void Update(float deltaTime, float velocity)
@@ -55,7 +60,7 @@ namespace GGJ2022
             if(createTimer <= 0)
             {
                 CreateFlotsam();
-                createTimer = rng.Next(35, 100) / 100f;
+                createTimer = rng.Next(35, 80) / 100f;
             }
         }
 
