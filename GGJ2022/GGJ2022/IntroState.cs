@@ -12,10 +12,20 @@ namespace GGJ2022
         //Fields
         private List<Word> text;
         private float timePassed;
+        Random rng = new Random();
 
         public IntroState(World world, SpriteBatch batch, Game1 game) : base(world, batch, game)
         {
             String[] words = "A second spent dreaming is a second well spent , but it cant be refunded".Split(" ");
+            if (rng.NextDouble() > 0.5)
+            {
+                words = "The opposite of a dream is not a nightmare , but reality itself".Split(" ");
+            }
+            else
+            {
+                words = "A second spent dreaming is a second well spent , but it cant be refunded".Split(" ");
+            }
+            
             text = new List<Word>();
             timePassed = 0;
             float distance = 100;
@@ -46,9 +56,9 @@ namespace GGJ2022
                 w.Update(deltaTime);
             }
             timePassed += deltaTime;
-            if(timePassed > 1)
+            if(timePassed > 9)
             {
-                timePassed = -10;
+                timePassed = 0;
                 GameStateManager.Transition(5, new AwakeState(world, batch, game));
             }
         }

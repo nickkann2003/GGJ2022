@@ -34,10 +34,24 @@ namespace GGJ2022
             this.height = height;
             this.idNum = idNum;
             this.batch = batch;
-            sprite = game.Content.Load<Texture2D>("floatsom1");
+            sprite = game.Content.Load<Texture2D>("floatsom" + idNum);
 
             rng = new Random();
-            c = new Color(rng.Next(100, 255), rng.Next(180, 230), rng.Next(100, 255), 180);
+            c = new Color(rng.Next(100, 255), rng.Next(180, 230), rng.Next(100, 255), 200);
+            double decider = rng.NextDouble();
+            if (decider < 0.3)
+            {
+                c = new Color(rng.Next(90, 130), rng.Next(200, 255), rng.Next(160, 210), 200);
+            }
+            else if(decider < 0.6)
+            {
+                c = new Color(rng.Next(200, 255), rng.Next(160, 210), rng.Next(90, 130), 200);
+            }
+            else
+            {
+                c = new Color(rng.Next(160, 210), rng.Next(90, 130), rng.Next(210, 255), 200);
+            }
+            
             rotation = rng.Next(-45, 45);
         }
 

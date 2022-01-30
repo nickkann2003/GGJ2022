@@ -16,8 +16,13 @@ namespace GGJ2022
         Texture2D playerTexture;
         int size;
         Vector2 velocity;
+        Vector2[] previous;
+        float[] yPrev;
+        float previousUpdater;
         float[] jumpcd;
         bool asleep;
+
+        Random rng;
 
         Body b;
 
@@ -46,6 +51,18 @@ namespace GGJ2022
             velocity = new Vector2(0, 0);
             jumpcd = new float[4];
             this.asleep = asleep;
+            previous = new Vector2[5];
+            yPrev = new float[52];
+            for(int i = 0; i < yPrev.Length; i++)
+            {
+                yPrev[i] = -100;
+            }
+            for(int i = 0; i < previous.Length; i++)
+            {
+                previous[i] = new Vector2(-100, -100);
+            }
+            previousUpdater = 0;
+            rng = new Random();
         }
 
         public void Update(float deltaTime)
@@ -75,11 +92,71 @@ namespace GGJ2022
                 b.LinearVelocity = new tainicom.Aether.Physics2D.Common.Vector2(velocity.X, velocity.Y);
                 b.ApplyLinearImpulse(new tainicom.Aether.Physics2D.Common.Vector2(velocity.X, velocity.Y));
             }
-            
+            else
+            {
+                velocity.Y = b.LinearVelocity.Y;
+                if (key.IsKeyDown(Keys.A))
+                {
+                    velocity.X -= 100/(10+Math.Abs(velocity.X));
+                }
+                if (key.IsKeyDown(Keys.D))
+                {
+                    velocity.X += 100 /(10 + Math.Abs(velocity.X));
+                }
+                if (key.IsKeyDown(Keys.W))
+                {
+                    velocity.Y -= 15;
+                }
+                if (key.IsKeyDown(Keys.S))
+                {
+                    velocity.Y += 8;
+                }
+                b.LinearVelocity = new tainicom.Aether.Physics2D.Common.Vector2(0, velocity.Y);
+                
+            }
+            previousUpdater -= deltaTime;
+
+            previous[0].X = b.Position.X - (velocity.X * 0.1f);
+            previous[0].Y = b.Position.Y;
+            yPrev[0] = b.Position.Y;
+
+            for (int i = previous.Length-1; i > 0; i--)
+            {
+                previous[i].X = previous[i - 1].X - (velocity.X*0.1f);
+            }
+
+                for(int i = yPrev.Length-1; i > 0;  i--)
+                {
+                    yPrev[i] = yPrev[i - 1];
+                    if(i%10 == 0)
+                    {
+                        previous[(i / 10)-1].Y = yPrev[i];
+                    }
+                }
         }
 
         public void Draw()
         {
+            if (asleep)
+            {
+                float alpha = Math.Abs(velocity.X) - 100;
+                if (alpha < 0)
+                {
+                    alpha = 0;
+                }
+                else
+                {
+                    alpha = (alpha * 90) / (350 * 255);
+                }
+                    
+                for(int i = 0; i < previous.Length; i++)
+                {
+                    batch.Draw(playerTexture, new Rectangle((int)previous[i].X, 900 - (int)((20f / 50f) * (size - i * 3))/2, size - (i * 3), (int)((20f / 50f) * (size - i * 3))), new Color(Color.Black, alpha));
+                    batch.Draw(playerTexture, new Rectangle((int)previous[i].X, (int)previous[i].Y, size-(i*3), size-(i*3)), new Color(Color.White, alpha));
+                }
+                batch.Draw(playerTexture, new Rectangle((int)b.Position.X, 892, size, (int)((20f / 50f) * size)), new Color(Color.Black, alpha));
+                
+            }
             batch.Draw(playerTexture, new Rectangle((int)b.Position.X, (int)b.Position.Y, size, size), Color.White);
         }
 

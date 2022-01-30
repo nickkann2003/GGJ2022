@@ -51,3 +51,12 @@ C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Cont
 C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\blackSquare.xnb
 C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\MonoGame.Primitives2D.dll
 C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\playerCharacter.xnb
+C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\floatsom10.xnb
+C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\floatsom2.xnb
+C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\floatsom3.xnb
+C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\floatsom4.xnb
+C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\floatsom5.xnb
+C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\floatsom6.xnb
+C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\floatsom7.xnb
+C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\floatsom8.xnb
+C:\Users\rkann\source\repos\GGJ2022\GGJ2022\GGJ2022\bin\Debug\netcoreapp3.1\Content\floatsom9.xnb

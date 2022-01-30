@@ -29,16 +29,24 @@ namespace GGJ2022
             bgOverlay = game.Content.Load<Texture2D>("floatsomBackgroundOverlay");
             for(int i = 0; i < 5; i++)
             {
-                CreateFlotsam();
+                CreateFlotsam(10);
             }
         }
 
-        public void CreateFlotsam()
+        public void CreateFlotsam(float velocity)
         {
             float width = rng.Next(150, 350);
             float height = width + rng.Next(-50, 50);
             float mult = (rng.Next(90, 190) / 100f) * (rng.Next(70, 150) / 100f);
-            flotsam.Add(new Flotsam(rng.Next(2400, 2900), rng.Next(-150, 800), mult, width, height, rng.Next(10), batch, game)); 
+            if (velocity > 0)
+            {
+                flotsam.Add(new Flotsam(rng.Next(2400, 2900), rng.Next(-150, 800), mult, width, height, rng.Next(1, 11), batch, game));
+            }
+            else
+            {
+                flotsam.Add(new Flotsam(rng.Next(-900, -500), rng.Next(-150, 800), mult, width, height, rng.Next(1, 11), batch, game));
+            }
+            
         }
 
         public void Update(float deltaTime, float velocity)
@@ -47,7 +55,11 @@ namespace GGJ2022
             foreach (Flotsam f in flotsam)
             {
                 f.Update(deltaTime, velocity);
-                if(f.X + f.Width < 0)
+                if(f.X + f.Width < -500 && velocity >= 0)
+                {
+                    toRemove.Add(f);
+                }
+                if(f.X + f.Width > 2400 && velocity < 0)
                 {
                     toRemove.Add(f);
                 }
@@ -59,8 +71,15 @@ namespace GGJ2022
             createTimer -= deltaTime;
             if(createTimer <= 0)
             {
-                CreateFlotsam();
-                createTimer = rng.Next(35, 80) / 100f;
+                CreateFlotsam(velocity);
+                if(Math.Abs(velocity) > 100)
+                {
+                    createTimer = rng.Next(1, 20) / 100f;
+                }
+                else
+                {
+                    createTimer = rng.Next(35, 80) / 100f;
+                }
             }
         }
 

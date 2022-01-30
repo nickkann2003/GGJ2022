@@ -32,16 +32,16 @@ namespace GGJ2022
         {
             p.Update(deltaTime);
             t.Update(deltaTime*2);
-            if(t.TimePassed >= 1f && t.TimePassed < 31)
+            if(t.TimePassed >= 45.8f && t.TimePassed < 46)
             {
-                t.TimePassed = 31;
-                GameStateManager.Transition(5, new AsleepState(world, batch, game, 33.4f));
+                t.TimePassed = 46;
+                GameStateManager.Transition(5, new AsleepState(world, batch, game, 48f));
             }
         }
 
         public override void Draw()
         {
-            game.GraphicsDevice.Clear(Color.DimGray);
+            game.GraphicsDevice.Clear(Color.LightGray);
             Primitives2D.DrawRectangle(batch, new Rectangle(710, 290, 500, 500), Color.AntiqueWhite);
             p.Draw();
             Primitives2D.DrawLine(batch, new Vector2(1210, 790), new Vector2(710, 790), Color.Black);

@@ -28,14 +28,14 @@ namespace GGJ2022
 
         public override void Update(float deltaTime)
         {
-            background.Update(deltaTime, 100);
+            background.Update(deltaTime, p.Velocity.X);
             t.Update(deltaTime);
             p.Update(deltaTime);
             if(t.TimePassed < 0)
             {
                 t.TimePassed = 0;
                 t.Stop();
-                GameStateManager.Transition(5, new AwakeState(world, batch, game));
+                GameStateManager.Transition(5, new IntroState(world, batch, game));
             }
         }
 
@@ -43,7 +43,7 @@ namespace GGJ2022
         {
             background.Draw();
             t.Draw();
-            batch.Draw(p.GetTexture(), new Rectangle((int)p.GetX(), 892, p.Size, (int)((20f / 50f) * p.Size)), Color.DarkGray);
+            
             p.Draw();
         }
 
