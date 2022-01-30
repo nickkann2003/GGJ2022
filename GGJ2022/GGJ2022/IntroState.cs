@@ -49,7 +49,7 @@ namespace GGJ2022
             if(timePassed > 9)
             {
                 timePassed = 0;
-                GameStateManager.Transition(5, new AwakeState(world, batch, game));
+                GameStateManager.Transition(5, new AsleepState(world, batch, game));
             }
         }
 

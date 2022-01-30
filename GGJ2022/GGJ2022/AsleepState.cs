@@ -9,10 +9,15 @@ namespace GGJ2022
 {
     class AsleepState : State
     {
+        //Fields
+
+        //Constructors
         public AsleepState(World world, SpriteBatch batch, Game1 game) : base(world, batch, game)
         {
-
+            
         }
+
+        //Methods
 
         public override void Update(float deltaTime)
         {
@@ -21,7 +26,7 @@ namespace GGJ2022
 
         public override void Draw()
         {
-            game.GraphicsDevice.Clear(Color.AliceBlue);
+
         }
     }
 }

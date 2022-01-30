@@ -29,5 +29,10 @@ namespace GGJ2022
         {
 
         }
+
+        public virtual void Dispose()
+        {
+
+        }
     }
 }

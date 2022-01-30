@@ -506,6 +506,12 @@
           "lib/netstandard2.0/MonoGame.Extended.Tiled.dll": {}
         }
       },
+      "MonoGame.Framework.DesktopGL/3.7.1.189": {
+        "type": "package",
+        "build": {
+          "build/MonoGame.Framework.DesktopGL.targets": {}
+        }
+      },
       "MonoGame.Framework.WindowsDX/3.8.0.1641": {
         "type": "package",
         "dependencies": {
@@ -528,6 +534,18 @@
         ],
         "build": {
           "build/MonoGame.Framework.WindowsDX.targets": {}
+        }
+      },
+      "MonoGame.Primitives2D/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "MonoGame.Framework.DesktopGL": "3.7.1.189"
+        },
+        "compile": {
+          "lib/net45/MonoGame.Primitives2D.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MonoGame.Primitives2D.dll": {}
         }
       },
       "NETStandard.Library/1.6.0": {
@@ -3073,6 +3091,31 @@
         "monogame.extended.tiled.nuspec"
       ]
     },
+    "MonoGame.Framework.DesktopGL/3.7.1.189": {
+      "sha512": "7e6CvCZAAglBIPDA+lTwdaRTv0EARPl4s7Ai8gkn7ximiFyRODrpyciSxENUgCowap4y5d5B3Then7k/6UbHGw==",
+      "type": "package",
+      "path": "monogame.framework.desktopgl/3.7.1.189",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MonoGame.Framework.DesktopGL.targets",
+        "build/native/MonoGame.Framework.dll.config",
+        "build/native/libSDL2-2.0.0.dylib",
+        "build/native/libopenal.1.dylib",
+        "build/native/x64/SDL2.dll",
+        "build/native/x64/libSDL2-2.0.so.0",
+        "build/native/x64/libopenal.so.1",
+        "build/native/x64/soft_oal.dll",
+        "build/native/x86/SDL2.dll",
+        "build/native/x86/libSDL2-2.0.so.0",
+        "build/native/x86/libopenal.so.1",
+        "build/native/x86/soft_oal.dll",
+        "lib/net45/MonoGame.Framework.dll",
+        "lib/net45/MonoGame.Framework.xml",
+        "monogame.framework.desktopgl.3.7.1.189.nupkg.sha512",
+        "monogame.framework.desktopgl.nuspec"
+      ]
+    },
     "MonoGame.Framework.WindowsDX/3.8.0.1641": {
       "sha512": "uWPGugWXe0eqrA5KgKc38z2K+RNgh8DmIDjIDdc7JX8m7azYDkNapHwIOANkEj5ZYAr7uqxjoqGcU4VS+ayl1g==",
       "type": "package",
@@ -3088,6 +3131,20 @@
         "lib/netcoreapp3.1/MonoGame.Framework.xml",
         "monogame.framework.windowsdx.3.8.0.1641.nupkg.sha512",
         "monogame.framework.windowsdx.nuspec"
+      ]
+    },
+    "MonoGame.Primitives2D/1.1.1": {
+      "sha512": "uKTO9G9lvcI+WM0DEyRqXRMSkiZMVO4CrBcn4CUGjlqlzEmb+oRCd6rSk+VZLstNRDttuzB2Ig719R3jvJJTdg==",
+      "type": "package",
+      "path": "monogame.primitives2d/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/monogame.ico",
+        "images/monogame.png",
+        "lib/net45/MonoGame.Primitives2D.dll",
+        "monogame.primitives2d.1.1.1.nupkg.sha512",
+        "monogame.primitives2d.nuspec"
       ]
     },
     "NETStandard.Library/1.6.0": {
@@ -7735,7 +7792,8 @@
       "MonoGame.Content.Builder.Task >= 3.8.0.1641",
       "MonoGame.Extended >= 3.8.0",
       "MonoGame.Extended.Content.Pipeline >= 3.8.0",
-      "MonoGame.Framework.WindowsDX >= 3.8.0.1641"
+      "MonoGame.Framework.WindowsDX >= 3.8.0.1641",
+      "MonoGame.Primitives2D >= 1.1.1"
     ]
   },
   "packageFolders": {
@@ -7801,6 +7859,10 @@
           "MonoGame.Framework.WindowsDX": {
             "target": "Package",
             "version": "[3.8.0.1641, )"
+          },
+          "MonoGame.Primitives2D": {
+            "target": "Package",
+            "version": "[1.1.1, )"
           }
         },
         "imports": [
@@ -7824,5 +7886,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MonoGame.Primitives2D 1.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "MonoGame.Primitives2D",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }
