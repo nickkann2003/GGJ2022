@@ -6,3 +6,7 @@ For each second they spend in the box, they get additional time in the second ph
 The goal of the game was to convey the duality between dreams and reality, and how there must be a balance between the two.
 
 Screenshots:
+
+![Screenshot](FloatsomGameplaySC3.png)
+
+![Screenshot](FloatsomScreenshot.png)
